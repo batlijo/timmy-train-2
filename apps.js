@@ -18,7 +18,7 @@ var database = firebase.database();
   var minutes = "";
 
  $("#add-train").on("click", function(event) {
-  
+
  event.preventDefault();
 
   var name = $("#name-input").val().trim();
@@ -46,16 +46,16 @@ var database = firebase.database();
   	console.log(snapshot.val().name);
   	console.log(snapshot.val().destination);
   	console.log(snapshot.val().timeInput);
-  	console.log(snapshot.val().frequency-input);
+  	console.log(snapshot.val().frequency);
     console.log(snapshot.val().nextArrival);
-    console.log(snapshot.val().minutes-input);
+    console.log(snapshot.val().minutes);
 
   	$("#name-display").text(snapshot.val().name);
   	$("#destination-display").text(snapshot.val().destination);
   	$("#frequency-display").text(snapshot.val().timeInput);
-  	$("#arrival-display").text(snapshot.val().frequency-input);
+  	$("#arrival-display").text(snapshot.val().frequency);
     $("#arrival-display").text(snapshot.val().nextArrival);
-    $("#arrival-display").text(snapshot.val().minutes-input);
+    $("#arrival-display").text(snapshot.val().minutes);
 
   })
 
